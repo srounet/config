@@ -43,6 +43,11 @@
 ;; load yasnippet and make it global
 (require 'cl-lib)
 (require 'yasnippet)
+;; load custom snippets
+(setq yas-snippet-dirs
+      '("~/.emacs.d/plugins/yasnippet-custom/snippets"  ;; custom snippets
+        "~/.emacs.d/plugins/yasnippet/snippets" ;; the default collection
+        ))
 (yas-global-mode 1)
 
 ;; Configure flymake
