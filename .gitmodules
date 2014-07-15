@@ -7,3 +7,6 @@
 [submodule ".emacs.d/plugins/emacs-flymake"]
 	path = .emacs.d/plugins/emacs-flymake
 	url = git@github.com:illusori/emacs-flymake.git
+[submodule ".emacs.d/plugins/emacs-nav"]
+	path = .emacs.d/plugins/emacs-nav
+	url = git@github.com:ancane/emacs-nav.git

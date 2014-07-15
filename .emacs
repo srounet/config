@@ -8,6 +8,7 @@
 ;; plugins
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-flymake")
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-nav")
 
 ;; Init color themes and set color-theme-solarized-dark to default
 (require 'color-theme)
@@ -71,3 +72,26 @@
 	       '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;; load and configure nav-mode
+(require 'nav)
+(nav-disable-overeager-window-splitting)
+(global-set-key (kbd "<f8>") 'nav-toggle)
+
+(defface nav-hl-line
+  '((t :background "#777777")) ; change to what suits best your theme
+  "Custom face for highlighting the current line in nav mode."
+  :version "22.1"
+  :group 'hl-line)
+
+;; This allows global-hl-line be disabled for certain buffers (nav in our case)
+(make-variable-buffer-local 'global-hl-line-mode)
+
+(defun nav-mode-hl-hook ()
+  (setq global-hl-line-mode nil)
+  (set (make-local-variable 'hl-line-face) 'nav-hl-line)
+  (hl-line-mode t)
+  (local-set-key (kbd "<right>") 'nav-open-file-under-cursor)
+  (local-set-key (kbd "<left>")  'nav-go-up-one-dir))
+
+(add-hook 'nav-mode-hook 'nav-mode-hl-hook)
