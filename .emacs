@@ -17,6 +17,10 @@
      (color-theme-initialize)
      (color-theme-solarized-dark)))
 
+;; Make Ctrl + Arrow work under a tmux-session
+(global-set-key "\M-[1;5C"    'forward-word)      ; Ctrl+right   => forward word
+(global-set-key "\M-[1;5D"    'backward-word)     ; Ctrl+left    => backward word
+
 ;; Remove trailing whitespace
 (require 'whitespace)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
