@@ -1,12 +1,12 @@
 [submodule ".emacs.d/plugins/yasnippet"]
 	path = .emacs.d/plugins/yasnippet
-	url = git@github.com:capitaomorte/yasnippet.git
+	url = https://github.com/capitaomorte/yasnippet.git
 [submodule ".emacs.d/themes/emacs-color-theme-solarized"]
 	path = .emacs.d/themes/emacs-color-theme-solarized
-	url = git@github.com:sellout/emacs-color-theme-solarized.git
+	url = https://github.com/sellout/emacs-color-theme-solarized.git
 [submodule ".emacs.d/plugins/emacs-flymake"]
 	path = .emacs.d/plugins/emacs-flymake
-	url = git@github.com:illusori/emacs-flymake.git
+	url = https://github.com/illusori/emacs-flymake.git
 [submodule ".emacs.d/plugins/emacs-nav"]
 	path = .emacs.d/plugins/emacs-nav
-	url = git@github.com:ancane/emacs-nav.git
+	url = https://github.com/ancane/emacs-nav.git
