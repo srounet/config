@@ -26,9 +26,14 @@ ln -s ~/config/.bash_aliases .
 ### Emacs
 
 - Solarized-dark theme
+
+![](http://batsov.com/images/articles/solarized-emacs.png)
+
 - yasnippet (with full snippets collection)
-- flymake
+- flymake (syntax check and highlight)
 - emacs-nav
+
+![](http://i.imgur.com/Tzid4.png)
 
 Under emacs hitting "**\<F8>**" will display the folder navigation pane.
 
