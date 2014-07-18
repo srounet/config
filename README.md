@@ -36,6 +36,7 @@ ln -s ~/config/.bash_aliases .
 ![](http://i.imgur.com/Tzid4.png)
 
 Under emacs hitting "**\<F8>**" will display the folder navigation pane.
+Under emacs hitting "**\<F9>**" will toggle the 80-column bar
 
 ### Tmux
 
