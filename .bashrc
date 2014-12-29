@@ -97,3 +97,19 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+
+
+# Custom bash PS1 with git support
+function git_parse_dirty {
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+function git_parse_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(git_parse_dirty)]/"
+}
+
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(git_parse_branch)\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(git_parse_branch)\$ '
+fi
