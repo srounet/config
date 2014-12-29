@@ -23,3 +23,6 @@ fi
 
 # Custom env vars
 export TERM=xterm-256color
+
+# Custom dircolors
+eval `dircolors ~/config/dircolors-solarized/dircolors.256dark`
