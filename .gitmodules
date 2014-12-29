@@ -10,3 +10,6 @@
 [submodule ".emacs.d/plugins/emacs-nav"]
 	path = .emacs.d/plugins/emacs-nav
 	url = https://github.com/ancane/emacs-nav.git
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = git@github.com:seebi/dircolors-solarized.git
