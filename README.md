@@ -6,9 +6,8 @@
 Clone repository and update submodules
 
 ```sh
-git clone https://github.com/srounet/config.git ~/config
+git clone --recursive https://github.com/srounet/config.git ~/config
 cd ~/config
-git submodule update --init --recursive
 ```
 
 Symlink desired files to your home
