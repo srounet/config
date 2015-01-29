@@ -10,6 +10,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-nav")
 (add-to-list 'load-path "~/.emacs.d/plugins/fill-column-indicator")
+(add-to-list 'load-path "~/.emacs.d/plugins/php-mode")
 
 ;; Emacs globals
 ;; displays column number
@@ -33,6 +34,9 @@
 (setq fci-rule-column 80)
 (global-set-key (kbd "<f9>") 'fci-mode)
 
+;; php-mode
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 
 ;; whitespace-mode
 (require 'whitespace)
