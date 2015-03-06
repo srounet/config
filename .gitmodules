@@ -16,3 +16,6 @@
 [submodule ".emacs.d/plugins/php-mode"]
 	path = .emacs.d/plugins/php-mode
 	url = git@github.com:ejmr/php-mode.git
+[submodule ".emacs.d/plugins/web-mode"]
+	path = .emacs.d/plugins/web-mode
+	url = https://github.com/fxbois/web-mode

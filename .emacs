@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/emacs-nav")
 (add-to-list 'load-path "~/.emacs.d/plugins/fill-column-indicator")
 (add-to-list 'load-path "~/.emacs.d/plugins/php-mode")
+(add-to-list 'load-path "~/.emacs.d/plugins/web-mode")
 
 ;; Emacs globals
 ;; displays column number
@@ -55,6 +56,21 @@
   '("~/.emacs.d/plugins/yasnippet-custom/snippets"  ;; custom snippets
     "~/.emacs.d/plugins/yasnippet/snippets")) ;; the default collection
 (yas-global-mode 1)
+
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-style-padding 1)
+  (setq web-mode-script-padding 1)
+  (setq web-mode-block-padding 0)
+  (setq web-mode-enable-current-column-highlight t)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; Configure flymake
 ;; load and configure flymake
