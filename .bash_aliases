@@ -3,6 +3,9 @@
 # Run emacs within a 256-colored terminal
 alias emacs='TERM=xterm-256color; emacs -nw'
 
+# Run tmux withing a 256-colored terminal
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Make some possibly destructive commands more interactive.
 alias rm='rm -i'
 alias mv='mv -i'
