@@ -8,3 +8,6 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" fix tmux colors
+set t_ut= 
