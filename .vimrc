@@ -20,3 +20,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Highlight search
 set hls
+
+" Syntastic configuration
+let g:syntastic_python_checkers = ['flake8', 'pylint', 'pep8']
