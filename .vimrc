@@ -10,4 +10,13 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " fix tmux colors
-set t_ut= 
+set t_ut=
+
+" tab to spaces
+:set tabstop=4 shiftwidth=4 expandtab
+
+" autoremove trailing spaces
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Highlight search
+set hls
