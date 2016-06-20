@@ -12,7 +12,7 @@
 	url = https://github.com/ancane/emacs-nav.git
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
-	url = git@github.com:seebi/dircolors-solarized.git
+	url = https://github.com/seebi/dircolors-solarized.git
 [submodule ".emacs.d/plugins/php-mode"]
 	path = .emacs.d/plugins/php-mode
 	url = git@github.com:ejmr/php-mode.git
